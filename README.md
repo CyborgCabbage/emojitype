@@ -1,9 +1,2 @@
-# Fabric Example Mod
-
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+# Emoji Type
+Emoji Type is a Minecraft 1.18.1 Fabric mod that allows you to easily enter emoji into text fields by typing a specific key word (e.g. :skull:). You can send emojis on a server without the server or other players needing to have the mod installed.
