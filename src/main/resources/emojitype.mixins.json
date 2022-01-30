@@ -9,7 +9,8 @@
     "CommandSuggestorAccessor",
     "CommandSuggestorMixin",
     "SuggestionWindowMixin",
-    "TextFieldWidgetMixin"
+    "TextFieldWidgetMixin",
+    "SelectionManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

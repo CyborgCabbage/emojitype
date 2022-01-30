@@ -13,16 +13,13 @@ public class EmojiCode {
     public String getEmoji() {
         return emoji;
     }
-    public boolean substitute(StringBuilder string, int charIndex){
+    public boolean substitute(String string, int charIndex){
         for(int i = 0; i < code.length(); i++){
             int stringIndex = charIndex-i;
             int codeIndex = code.length()-1-i;
             if(stringIndex < 0 || codeIndex < 0) return false;
             if(string.charAt(stringIndex) != code.charAt(codeIndex)) return false;
         }
-        int stringStart = charIndex-(code.length()-1);
-        int stringEnd = charIndex+1;
-        string.replace(stringStart,stringEnd,emoji);
         return true;
     }
 }

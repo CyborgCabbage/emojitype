@@ -27,9 +27,8 @@ public abstract class SuggestionWindowMixin {
         TextFieldWidget textFieldWidget = ((CommandSuggestorAccessor)field_21615).getTextField();
         Suggestion suggestion = this.suggestions.get(this.selection);
         int justTyped = suggestion.getRange().getStart() + suggestion.getText().length()-1;
-        StringBuilder sb = new StringBuilder(textFieldWidget.getText());
         for(EmojiCode ec: EmojiTypeClient.emojiCodes){
-            if(ec.substitute(sb,justTyped)){
+            if(ec.substitute(textFieldWidget.getText(),justTyped)){
                 textFieldWidget.eraseCharacters(-ec.getCode().length());
                 textFieldWidget.write(ec.getEmoji());
                 break;

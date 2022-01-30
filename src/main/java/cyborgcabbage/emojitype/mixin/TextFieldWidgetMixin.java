@@ -22,10 +22,9 @@ public abstract class TextFieldWidgetMixin {
     @Inject(method="charTyped",at=@At("RETURN"))
     private void inject(char chr, int modifiers, CallbackInfoReturnable<Boolean> cir){
         if(cir.getReturnValue()) {
-            StringBuilder text = new StringBuilder(getText());
             int justTyped = getCursorPosWithOffset(-1);
             for(EmojiCode ec: EmojiTypeClient.emojiCodes){
-                if(ec.substitute(text,justTyped)){
+                if(ec.substitute(getText(),justTyped)){
                     eraseCharacters(-ec.getCode().length());
                     write(ec.getEmoji());
                     break;
