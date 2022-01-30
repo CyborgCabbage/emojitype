@@ -3,7 +3,6 @@ package cyborgcabbage.emojitype.mixin;
 import cyborgcabbage.emojitype.client.EmojiTypeClient;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.util.SelectionManager;
-import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

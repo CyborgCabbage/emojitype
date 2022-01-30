@@ -23,6 +23,7 @@ import java.util.regex.Pattern;
 @Mixin(CommandSuggestor.class)
 public abstract class CommandSuggestorMixin {
     private static final Pattern COLON_PATTERN = Pattern.compile("(:)");
+    private static final Pattern WHITESPACE_PATTERN = Pattern.compile("(\\s+)");
 
     @Shadow @Final private TextFieldWidget textField;
 
@@ -45,15 +46,19 @@ public abstract class CommandSuggestorMixin {
         if (!isCommand) {
             String textUptoCursor = text.substring(0, cursor);
             int start = Math.max(getLastColon(textUptoCursor)-1,0);
-            if(start < textUptoCursor.length()){
-                this.pendingSuggestions = CommandSource.suggestMatching(EmojiTypeClient.allCodes, new SuggestionsBuilder(textUptoCursor, start));
-                this.pendingSuggestions.thenRun(() -> {
-                    if (!this.pendingSuggestions.isDone()) {
-                        return;
-                    }
-                    this.showSuggestions(false);
-                });
-                ci.cancel();
+            int whitespace = getLastWhitespace(textUptoCursor);
+            if(start < textUptoCursor.length() && start >= whitespace){
+                if(textUptoCursor.charAt(start) == ':') {
+                    EmojiTypeClient.LOGGER.info(start + " : " + textUptoCursor.length());
+                    this.pendingSuggestions = CommandSource.suggestMatching(EmojiTypeClient.allCodes, new SuggestionsBuilder(textUptoCursor, start));
+                    this.pendingSuggestions.thenRun(() -> {
+                        if (!this.pendingSuggestions.isDone()) {
+                            return;
+                        }
+                        this.showSuggestions(false);
+                    });
+                    ci.cancel();
+                }
             }
         }
     }
@@ -64,6 +69,18 @@ public abstract class CommandSuggestorMixin {
         }
         int i = 0;
         Matcher matcher = COLON_PATTERN.matcher(input);
+        while (matcher.find()) {
+            i = matcher.end();
+        }
+        return i;
+    }
+
+    private int getLastWhitespace(String input){
+        if (Strings.isNullOrEmpty(input)) {
+            return 0;
+        }
+        int i = 0;
+        Matcher matcher = WHITESPACE_PATTERN.matcher(input);
         while (matcher.find()) {
             i = matcher.end();
         }

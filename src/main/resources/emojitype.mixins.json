@@ -8,9 +8,9 @@
   "client": [
     "CommandSuggestorAccessor",
     "CommandSuggestorMixin",
+    "SelectionManagerMixin",
     "SuggestionWindowMixin",
-    "TextFieldWidgetMixin",
-    "SelectionManagerMixin"
+    "TextFieldWidgetMixin"
   ],
   "injectors": {
     "defaultRequire": 1
