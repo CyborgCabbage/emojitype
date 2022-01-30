@@ -49,7 +49,6 @@ public abstract class CommandSuggestorMixin {
             int whitespace = getLastWhitespace(textUptoCursor);
             if(start < textUptoCursor.length() && start >= whitespace){
                 if(textUptoCursor.charAt(start) == ':') {
-                    EmojiTypeClient.LOGGER.info(start + " : " + textUptoCursor.length());
                     this.pendingSuggestions = CommandSource.suggestMatching(EmojiTypeClient.allCodes, new SuggestionsBuilder(textUptoCursor, start));
                     this.pendingSuggestions.thenRun(() -> {
                         if (!this.pendingSuggestions.isDone()) {
