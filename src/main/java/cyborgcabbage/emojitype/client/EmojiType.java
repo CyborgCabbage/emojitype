@@ -60,7 +60,6 @@ public class EmojiType {
             add(new EmojiCode(":sun:","☀"));
             add(new EmojiCode(":cloud:","☁"));
             add(new EmojiCode(":comet:","☄"));
-            add(new EmojiCode(":star:","⭐"));
             add(new EmojiCode(":moon:","☽"));
             add(new EmojiCode(":snowman:","⛄"));
             add(new EmojiCode(":storm:","⛈"));
@@ -97,7 +96,11 @@ public class EmojiType {
             add(new EmojiCode(":diamond:","◆"));
             add(new EmojiCode(":diamond2:","◇"));
             add(new EmojiCode(":loopedsquare:","⌘"));
-            add(new EmojiCode(":target:","⏳"));
+            add(new EmojiCode(":target:","◎"));
+            add(new EmojiCode(":star:","★"));
+            add(new EmojiCode(":star2:","☆"));
+            add(new EmojiCode(":star3:","⭐"));
+
             //Misc
             add(new EmojiCode(":fire:","\uD83D\uDD25"));
             add(new EmojiCode(":bell:","\uD83D\uDD14"));
@@ -130,10 +133,10 @@ public class EmojiType {
             add(new EmojiCode(":suitdiamond:","♦"));
             add(new EmojiCode(":suitdiamond2:","♢"));
             //Music
-            add(new EmojiCode(":notequarter:","♩"));
-            add(new EmojiCode(":noteeighth:","♪"));
-            add(new EmojiCode(":noteeighthbeemed:","♫"));
-            add(new EmojiCode(":notesixteenthbeemed:","♬"));
+            add(new EmojiCode(":note1:","♩"));
+            add(new EmojiCode(":note2:","♪"));
+            add(new EmojiCode(":note3:","♫"));
+            add(new EmojiCode(":note4:","♬"));
             add(new EmojiCode(":flat:","♭"));
             add(new EmojiCode(":sharp:","♮"));
             //Dice
