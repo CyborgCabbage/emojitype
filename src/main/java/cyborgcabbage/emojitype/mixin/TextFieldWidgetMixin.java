@@ -19,6 +19,10 @@ public abstract class TextFieldWidgetMixin {
 
     @Shadow public abstract void write(String text);
 
+    @Shadow private int selectionEnd;
+
+    @Shadow private int selectionStart;
+
     @Inject(method="charTyped",at=@At("RETURN"))
     private void inject(char chr, int modifiers, CallbackInfoReturnable<Boolean> cir){
         if(cir.getReturnValue()) {
@@ -26,6 +30,8 @@ public abstract class TextFieldWidgetMixin {
             for(EmojiCode ec: EmojiTypeClient.emojiCodes){
                 if(ec.match(getText(),justTyped)){
                     eraseCharacters(-ec.getCode().length());
+                    //When you hold shift (which you do to type ':') it messes up when eraseCharacters trys to move the cursor back, instead extending the selection
+                    selectionEnd = selectionStart;
                     write(ec.getEmoji());
                     break;
                 }
