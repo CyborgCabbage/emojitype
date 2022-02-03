@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
-public class EmojiTypeClient {
+public class EmojiType {
     public static final Logger LOGGER = LoggerFactory.getLogger("emojitype");
     public static ArrayList<EmojiCode> emojiCodes = new ArrayList<>() {
         {

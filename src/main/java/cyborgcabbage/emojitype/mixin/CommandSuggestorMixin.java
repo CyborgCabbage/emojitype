@@ -4,7 +4,7 @@ import com.google.common.base.Strings;
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
-import cyborgcabbage.emojitype.client.EmojiTypeClient;
+import cyborgcabbage.emojitype.client.EmojiType;
 import net.minecraft.client.gui.screen.CommandSuggestor;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.command.CommandSource;
@@ -49,7 +49,7 @@ public abstract class CommandSuggestorMixin {
             int whitespace = getLastPattern(textUptoCursor, WHITESPACE_PATTERN);
             if(start < textUptoCursor.length() && start >= whitespace){
                 if(textUptoCursor.charAt(start) == ':') {
-                    this.pendingSuggestions = CommandSource.suggestMatching(EmojiTypeClient.allCodes, new SuggestionsBuilder(textUptoCursor, start));
+                    this.pendingSuggestions = CommandSource.suggestMatching(EmojiType.allCodes, new SuggestionsBuilder(textUptoCursor, start));
                     this.pendingSuggestions.thenRun(() -> {
                         if (!this.pendingSuggestions.isDone()) {
                             return;
