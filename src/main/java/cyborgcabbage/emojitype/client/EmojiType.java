@@ -86,11 +86,18 @@ public class EmojiType {
             add(new EmojiCode(":no:","✘"));
             //Shape
             add(new EmojiCode(":square:","⏹"));
+            add(new EmojiCode(":square2:","□"));
             add(new EmojiCode(":circle:","⏺"));
+            add(new EmojiCode(":circle2:","○"));
             add(new EmojiCode(":cross:","❌"));
             add(new EmojiCode(":heart:","❤"));
+            add(new EmojiCode(":heart2:","❣"));
             add(new EmojiCode(":triangle:","▲"));
+            add(new EmojiCode(":triangle2:","△"));
             add(new EmojiCode(":diamond:","◆"));
+            add(new EmojiCode(":diamond2:","◇"));
+            add(new EmojiCode(":loopedsquare:","⌘"));
+            add(new EmojiCode(":target:","⏳"));
             //Misc
             add(new EmojiCode(":fire:","\uD83D\uDD25"));
             add(new EmojiCode(":bell:","\uD83D\uDD14"));
@@ -102,6 +109,17 @@ public class EmojiType {
             add(new EmojiCode(":electric:","⚡"));
             add(new EmojiCode(":mail:","✉"));
             add(new EmojiCode(":pencil:","✎"));
+            add(new EmojiCode(":degree:","°"));
+            add(new EmojiCode(":hourglass:","⌛"));
+            add(new EmojiCode(":hourglass2:","⏳"));
+            add(new EmojiCode(":_0:","▀"));
+            add(new EmojiCode(":_1:","▄"));
+            add(new EmojiCode(":_2:","█"));
+            add(new EmojiCode(":_3:","▌"));
+            add(new EmojiCode(":_4:","▐"));
+            add(new EmojiCode(":_5:","░"));
+            add(new EmojiCode(":_6:","▒"));
+            add(new EmojiCode(":_7:","▓"));
         }
     };
     public static ArrayList<String> allCodes = new ArrayList<>();

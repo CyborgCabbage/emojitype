@@ -31,6 +31,7 @@ public abstract class SuggestionWindowMixin {
             int justTyped = just-ec.getEmoji().length();
             if(ec.match(textFieldWidget.getText(),justTyped)){
                 textFieldWidget.eraseCharacters(-ec.getCode().length()-2);
+                textFieldWidget.setSelectionEnd(textFieldWidget.getCursor());
                 textFieldWidget.write(ec.getEmoji());
                 break;
             }
