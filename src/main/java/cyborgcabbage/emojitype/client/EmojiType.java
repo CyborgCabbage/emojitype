@@ -112,14 +112,14 @@ public class EmojiType {
             add(new EmojiCode(":degree:","°"));
             add(new EmojiCode(":hourglass:","⌛"));
             add(new EmojiCode(":hourglass2:","⏳"));
-            add(new EmojiCode(":_0:","▀"));
-            add(new EmojiCode(":_1:","▄"));
-            add(new EmojiCode(":_2:","█"));
-            add(new EmojiCode(":_3:","▌"));
-            add(new EmojiCode(":_4:","▐"));
-            add(new EmojiCode(":_5:","░"));
-            add(new EmojiCode(":_6:","▒"));
-            add(new EmojiCode(":_7:","▓"));
+            add(new EmojiCode(":z0:","▀"));
+            add(new EmojiCode(":z1:","▄"));
+            add(new EmojiCode(":z2:","█"));
+            add(new EmojiCode(":z3:","▌"));
+            add(new EmojiCode(":z4:","▐"));
+            add(new EmojiCode(":z5:","░"));
+            add(new EmojiCode(":z6:","▒"));
+            add(new EmojiCode(":z7:","▓"));
         }
     };
     public static ArrayList<String> allCodes = new ArrayList<>();
