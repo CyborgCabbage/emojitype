@@ -106,11 +106,12 @@ public class EmojiType {
     };
     public static ArrayList<String> allCodes = new ArrayList<>();
     public static ArrayList<String> allEmoji = new ArrayList<>();
-
+    public static ArrayList<String> emojiCodesCombined = new ArrayList<>();
     static {
         for(EmojiCode ec: emojiCodes){
             allCodes.add(ec.getCode());
             allEmoji.add(ec.getEmoji());
+            emojiCodesCombined.add(ec.getCode()+" "+ec.getEmoji());
         }
     }
 }

@@ -26,10 +26,11 @@ public abstract class SuggestionWindowMixin {
     private void overwriteComplete(CallbackInfo ci){
         TextFieldWidget textFieldWidget = ((CommandSuggestorAccessor)field_21615).getTextField();
         Suggestion suggestion = this.suggestions.get(this.selection);
-        int justTyped = suggestion.getRange().getStart() + suggestion.getText().length()-1;
+        int just = suggestion.getRange().getStart() + suggestion.getText().length()-2;
         for(EmojiCode ec: EmojiType.emojiCodes){
+            int justTyped = just-ec.getEmoji().length();
             if(ec.match(textFieldWidget.getText(),justTyped)){
-                textFieldWidget.eraseCharacters(-ec.getCode().length());
+                textFieldWidget.eraseCharacters(-ec.getCode().length()-2);
                 textFieldWidget.write(ec.getEmoji());
                 break;
             }
