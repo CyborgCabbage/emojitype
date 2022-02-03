@@ -24,7 +24,7 @@ public abstract class TextFieldWidgetMixin {
         if(cir.getReturnValue()) {
             int justTyped = getCursorPosWithOffset(-1);
             for(EmojiCode ec: EmojiTypeClient.emojiCodes){
-                if(ec.substitute(getText(),justTyped)){
+                if(ec.match(getText(),justTyped)){
                     eraseCharacters(-ec.getCode().length());
                     write(ec.getEmoji());
                     break;

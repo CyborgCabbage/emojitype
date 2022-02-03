@@ -25,7 +25,7 @@ public abstract class CommandSuggestorMixin {
     private static final Pattern COLON_PATTERN = Pattern.compile("(:)");
     private static final Pattern WHITESPACE_PATTERN = Pattern.compile("(\\s+)");
 
-    @Shadow @Final private TextFieldWidget textField;
+    @Shadow @Final TextFieldWidget textField;
 
     @Shadow @Final private boolean slashOptional;
 
@@ -45,8 +45,8 @@ public abstract class CommandSuggestorMixin {
         int cursor = this.textField.getCursor();
         if (!isCommand) {
             String textUptoCursor = text.substring(0, cursor);
-            int start = Math.max(getLastColon(textUptoCursor)-1,0);
-            int whitespace = getLastWhitespace(textUptoCursor);
+            int start = Math.max(getLastPattern(textUptoCursor, COLON_PATTERN)-1,0);
+            int whitespace = getLastPattern(textUptoCursor, WHITESPACE_PATTERN);
             if(start < textUptoCursor.length() && start >= whitespace){
                 if(textUptoCursor.charAt(start) == ':') {
                     this.pendingSuggestions = CommandSource.suggestMatching(EmojiTypeClient.allCodes, new SuggestionsBuilder(textUptoCursor, start));
@@ -62,24 +62,12 @@ public abstract class CommandSuggestorMixin {
         }
     }
 
-    private int getLastColon(String input){
+    private int getLastPattern(String input, Pattern pattern){
         if (Strings.isNullOrEmpty(input)) {
             return 0;
         }
         int i = 0;
-        Matcher matcher = COLON_PATTERN.matcher(input);
-        while (matcher.find()) {
-            i = matcher.end();
-        }
-        return i;
-    }
-
-    private int getLastWhitespace(String input){
-        if (Strings.isNullOrEmpty(input)) {
-            return 0;
-        }
-        int i = 0;
-        Matcher matcher = WHITESPACE_PATTERN.matcher(input);
+        Matcher matcher = pattern.matcher(input);
         while (matcher.find()) {
             i = matcher.end();
         }

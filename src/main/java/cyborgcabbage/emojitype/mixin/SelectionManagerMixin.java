@@ -10,21 +10,12 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 @Mixin(SelectionManager.class)
 public abstract class SelectionManagerMixin {
-    @Shadow private int selectionEnd;
 
     @Shadow private int selectionStart;
-
-    @Shadow protected abstract String deleteSelectedText(String string);
-
-    @Shadow @Final private Predicate<String> stringFilter;
-
-    @Shadow @Final private Consumer<String> stringSetter;
 
     @Shadow @Final private Supplier<String> stringGetter;
 
@@ -36,7 +27,7 @@ public abstract class SelectionManagerMixin {
     private void inject(String _unused, String insertion, CallbackInfo ci){
         String text = stringGetter.get();
         for(EmojiCode ec: EmojiTypeClient.emojiCodes){
-            if(ec.substitute(text,selectionStart-1)){
+            if(ec.match(text,selectionStart-1)){
                 delete(-ec.getCode().length());
                 insert(ec.getEmoji());
                 break;

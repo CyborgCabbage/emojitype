@@ -18,12 +18,6 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "cyborgcabbage.emojitype.EmojiType"
-    ],
-    "client": [
-      "cyborgcabbage.emojitype.client.EmojiTypeClient"
-    ]
   },
   "mixins": [
     "emojitype.mixins.json"
@@ -31,7 +25,6 @@
 
   "depends": {
     "fabricloader": ">=0.12.12",
-    "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
   },

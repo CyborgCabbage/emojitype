@@ -13,7 +13,7 @@ public class EmojiCode {
     public String getEmoji() {
         return emoji;
     }
-    public boolean substitute(String string, int charIndex){
+    public boolean match(String string, int charIndex){
         for(int i = 0; i < code.length(); i++){
             int stringIndex = charIndex-i;
             int codeIndex = code.length()-1-i;
