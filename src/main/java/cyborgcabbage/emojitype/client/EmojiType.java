@@ -120,6 +120,29 @@ public class EmojiType {
             add(new EmojiCode(":z5:","░"));
             add(new EmojiCode(":z6:","▒"));
             add(new EmojiCode(":z7:","▓"));
+            //Cards
+            add(new EmojiCode(":suitspade:","♠"));
+            add(new EmojiCode(":suitspade2:","♤"));
+            add(new EmojiCode(":suitheart:","♥"));
+            add(new EmojiCode(":suitheart2:","♡"));
+            add(new EmojiCode(":suitclub:","♣"));
+            add(new EmojiCode(":suitclub2:","♧"));
+            add(new EmojiCode(":suitdiamond:","♦"));
+            add(new EmojiCode(":suitdiamond2:","♢"));
+            //Music
+            add(new EmojiCode(":notequarter:","♩"));
+            add(new EmojiCode(":noteeighth:","♪"));
+            add(new EmojiCode(":noteeighthbeemed:","♫"));
+            add(new EmojiCode(":notesixteenthbeemed:","♬"));
+            add(new EmojiCode(":flat:","♭"));
+            add(new EmojiCode(":sharp:","♮"));
+            //Dice
+            add(new EmojiCode(":dice1:","⚀"));
+            add(new EmojiCode(":dice2:","⚁"));
+            add(new EmojiCode(":dice3:","⚂"));
+            add(new EmojiCode(":dice4:","⚃"));
+            add(new EmojiCode(":dice5:","⚄"));
+            add(new EmojiCode(":dice6:","⚅"));
         }
     };
     public static ArrayList<String> allCodes = new ArrayList<>();
