@@ -115,14 +115,7 @@ public class EmojiType {
             add(new EmojiCode(":degree:","°"));
             add(new EmojiCode(":hourglass:","⌛"));
             add(new EmojiCode(":hourglass2:","⏳"));
-            add(new EmojiCode(":z0:","▀"));
-            add(new EmojiCode(":z1:","▄"));
-            add(new EmojiCode(":z2:","█"));
-            add(new EmojiCode(":z3:","▌"));
-            add(new EmojiCode(":z4:","▐"));
-            add(new EmojiCode(":z5:","░"));
-            add(new EmojiCode(":z6:","▒"));
-            add(new EmojiCode(":z7:","▓"));
+
             //Cards
             add(new EmojiCode(":suitspade:","♠"));
             add(new EmojiCode(":suitspade2:","♤"));
@@ -146,6 +139,70 @@ public class EmojiType {
             add(new EmojiCode(":dice4:","⚃"));
             add(new EmojiCode(":dice5:","⚄"));
             add(new EmojiCode(":dice6:","⚅"));
+            //Additional symbols
+            //Shading
+            add(new EmojiCode(":z0:","▀"));
+            add(new EmojiCode(":z1:","▄"));
+            add(new EmojiCode(":z2:","█"));
+            add(new EmojiCode(":z3:","▌"));
+            add(new EmojiCode(":z4:","▐"));
+            add(new EmojiCode(":z5:","░"));
+            add(new EmojiCode(":z6:","▒"));
+            add(new EmojiCode(":z7:","▓"));
+            //Lowercase Letters
+            add(new EmojiCode(":za:","ⓐ"));
+            add(new EmojiCode(":zb:","ⓑ"));
+            add(new EmojiCode(":zc:","ⓒ"));
+            add(new EmojiCode(":zd:","ⓓ"));
+            add(new EmojiCode(":ze:","ⓔ"));
+            add(new EmojiCode(":zf:","ⓕ"));
+            add(new EmojiCode(":zg:","ⓖ"));
+            add(new EmojiCode(":zh:","ⓗ"));
+            add(new EmojiCode(":zi:","ⓘ"));
+            add(new EmojiCode(":zj:","ⓙ"));
+            add(new EmojiCode(":zk:","ⓚ"));
+            add(new EmojiCode(":zl:","ⓛ"));
+            add(new EmojiCode(":zm:","ⓜ"));
+            add(new EmojiCode(":zn:","ⓝ"));
+            add(new EmojiCode(":zo:","ⓞ"));
+            add(new EmojiCode(":zp:","ⓟ"));
+            add(new EmojiCode(":zq:","ⓠ"));
+            add(new EmojiCode(":zr:","ⓡ"));
+            add(new EmojiCode(":zs:","ⓢ"));
+            add(new EmojiCode(":zt:","ⓣ"));
+            add(new EmojiCode(":zu:","ⓤ"));
+            add(new EmojiCode(":zv:","ⓥ"));
+            add(new EmojiCode(":zw:","ⓦ"));
+            add(new EmojiCode(":zx:","ⓧ"));
+            add(new EmojiCode(":zy:","ⓨ"));
+            add(new EmojiCode(":zz:","ⓩ"));
+            //Uppercase Letters
+            add(new EmojiCode(":za_:","Ⓐ"));
+            add(new EmojiCode(":zb_:","Ⓑ"));
+            add(new EmojiCode(":zc_:","Ⓒ"));
+            add(new EmojiCode(":zd_:","Ⓓ"));
+            add(new EmojiCode(":ze_:","Ⓔ"));
+            add(new EmojiCode(":zf_:","Ⓕ"));
+            add(new EmojiCode(":zg_:","Ⓖ"));
+            add(new EmojiCode(":zh_:","Ⓗ"));
+            add(new EmojiCode(":zi_:","Ⓘ"));
+            add(new EmojiCode(":zj_:","Ⓙ"));
+            add(new EmojiCode(":zk_:","Ⓚ"));
+            add(new EmojiCode(":zl_:","Ⓛ"));
+            add(new EmojiCode(":zm_:","Ⓜ"));
+            add(new EmojiCode(":zn_:","Ⓝ"));
+            add(new EmojiCode(":zo_:","Ⓞ"));
+            add(new EmojiCode(":zp_:","Ⓟ"));
+            add(new EmojiCode(":zq_:","Ⓠ"));
+            add(new EmojiCode(":zr_:","Ⓡ"));
+            add(new EmojiCode(":zs_:","Ⓢ"));
+            add(new EmojiCode(":zt_:","Ⓣ"));
+            add(new EmojiCode(":zu_:","Ⓤ"));
+            add(new EmojiCode(":zv_:","Ⓥ"));
+            add(new EmojiCode(":zw_:","Ⓦ"));
+            add(new EmojiCode(":zx_:","Ⓧ"));
+            add(new EmojiCode(":zy_:","Ⓨ"));
+            add(new EmojiCode(":zz_:","Ⓩ"));
         }
     };
     public static ArrayList<String> allCodes = new ArrayList<>();
