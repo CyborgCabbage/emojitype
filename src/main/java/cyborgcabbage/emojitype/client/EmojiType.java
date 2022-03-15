@@ -1,6 +1,7 @@
 package cyborgcabbage.emojitype.client;
 
 import cyborgcabbage.emojitype.emoji.EmojiCode;
+import net.minecraft.MinecraftVersion;
 
 import java.util.ArrayList;
 
@@ -14,20 +15,20 @@ public class EmojiType {
             add(new EmojiCode(":skull:","☠"));
             //Tool
             add(new EmojiCode(":pickaxe:","⛏"));
-            //add(new EmojiCode(":axe:","\uD83E\uDE93"));
-            //add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
-            //add(new EmojiCode(":shears:","✂"));
-            //add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
+            add(new EmojiCode(":axe:","\uD83E\uDE93",2573));
+            add(new EmojiCode(":bucket:","\uD83E\uDEA3",2725));
+            add(new EmojiCode(":shears:","✂",2725));
+            add(new EmojiCode(":fishing:","\uD83C\uDFA3",2573));
             add(new EmojiCode(":umbrella:","☂"));
             //Combat
-            //add(new EmojiCode(":trident:","\uD83D\uDD31"));
-            //add(new EmojiCode(":sword:","\uD83D\uDDE1"));
-            //add(new EmojiCode(":shield:","\uD83D\uDEE1"));
+            add(new EmojiCode(":trident:","\uD83D\uDD31",2573));
+            add(new EmojiCode(":sword:","\uD83D\uDDE1",2573));
+            add(new EmojiCode(":shield:","\uD83D\uDEE1",2573));
             add(new EmojiCode(":duel:","⚔"));
-            //add(new EmojiCode(":bow:","\uD83C\uDFF9"));
+            add(new EmojiCode(":bow:","\uD83C\uDFF9",2573));
             //Potion
-            //add(new EmojiCode(":potion:","\uD83E\uDDEA"));
-            //add(new EmojiCode(":splash:","⚗"));
+            add(new EmojiCode(":potion:","\uD83E\uDDEA",2573));
+            add(new EmojiCode(":splash:","⚗",2573));
             //Mark
             add(new EmojiCode(":copyright:","©"));
             add(new EmojiCode(":registered:","®"));
@@ -71,7 +72,7 @@ public class EmojiType {
             add(new EmojiCode(":poweron:","⏻"));
             add(new EmojiCode(":poweroff:","⏼"));
             //Flag
-            //add(new EmojiCode(":whiteflag:","⚑"));
+            add(new EmojiCode(":whiteflag:","⚑",2725));
             add(new EmojiCode(":blackflag:","⚐"));
             //Boolean
             add(new EmojiCode(":box:","☐"));
@@ -99,8 +100,8 @@ public class EmojiType {
 
             //Misc
             add(new EmojiCode(":fire:","\uD83D\uDD25"));
-            //add(new EmojiCode(":bell:","\uD83D\uDD14"));
-            //add(new EmojiCode(":hunger:","\uD83C\uDF56"));
+            add(new EmojiCode(":bell:","\uD83D\uDD14", 2725));
+            add(new EmojiCode(":hunger:","\uD83C\uDF56", 2725));
             add(new EmojiCode(":unknown:","�"));
             add(new EmojiCode(":house:","⌂"));
             add(new EmojiCode(":clock:","⌚"));
@@ -110,7 +111,7 @@ public class EmojiType {
             add(new EmojiCode(":pencil:","✎"));
             add(new EmojiCode(":degree:","°"));
             add(new EmojiCode(":hourglass:","⌛"));
-            //add(new EmojiCode(":hourglass2:","⏳"));
+            add(new EmojiCode(":hourglass2:","⏳", 2725));
 
             //Cards
             add(new EmojiCode(":suitspade:","♠"));
@@ -135,7 +136,7 @@ public class EmojiType {
             add(new EmojiCode(":dice4:","⚃"));
             add(new EmojiCode(":dice5:","⚄"));
             add(new EmojiCode(":dice6:","⚅"));
-            //Additional symbols
+            //additional symbols
             //Shading
             add(new EmojiCode(":z0:","▀"));
             add(new EmojiCode(":z1:","▄"));
@@ -205,6 +206,9 @@ public class EmojiType {
     public static ArrayList<String> allEmoji = new ArrayList<>();
     public static ArrayList<String> emojiCodesCombined = new ArrayList<>();
     static {
+        int dataVersion = MinecraftVersion.field_25319.getWorldVersion();
+        emojiCodes.removeIf(e-> e.getMinDataVersion() > dataVersion);
+
         for(EmojiCode ec: emojiCodes){
             allCodes.add(ec.getCode());
             allEmoji.add(ec.getEmoji());
