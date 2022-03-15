@@ -15,7 +15,7 @@ public abstract class TextFieldWidgetMixin {
 
     @Shadow public abstract String getText();
 
-    @Shadow protected abstract int getCursorPosWithOffset(int offset);
+    @Shadow protected abstract int method_27537(int offset);
 
     @Shadow public abstract void write(String text);
 
@@ -26,7 +26,7 @@ public abstract class TextFieldWidgetMixin {
     @Inject(method="charTyped",at=@At("RETURN"))
     private void inject(char chr, int modifiers, CallbackInfoReturnable<Boolean> cir){
         if(cir.getReturnValue()) {
-            int justTyped = getCursorPosWithOffset(-1);
+            int justTyped = method_27537(-1);
             for(EmojiCode ec: EmojiType.emojiCodes){
                 if(ec.match(getText(),justTyped)){
                     eraseCharacters(-ec.getCode().length());

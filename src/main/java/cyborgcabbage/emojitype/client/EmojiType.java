@@ -1,15 +1,11 @@
 package cyborgcabbage.emojitype.client;
 
 import cyborgcabbage.emojitype.emoji.EmojiCode;
-import net.fabricmc.api.ClientModInitializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
 public class EmojiType {
-    public static final Logger LOGGER = LoggerFactory.getLogger("emojitype");
-    public static ArrayList<EmojiCode> emojiCodes = new ArrayList<>() {
+    public static ArrayList<EmojiCode> emojiCodes = new ArrayList<EmojiCode>() {
         {
             //Face
             add(new EmojiCode(":happy:","☺"));
@@ -18,20 +14,20 @@ public class EmojiType {
             add(new EmojiCode(":skull:","☠"));
             //Tool
             add(new EmojiCode(":pickaxe:","⛏"));
-            add(new EmojiCode(":axe:","\uD83E\uDE93"));
-            add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
-            add(new EmojiCode(":shears:","✂"));
-            add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
+            //add(new EmojiCode(":axe:","\uD83E\uDE93"));
+            //add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
+            //add(new EmojiCode(":shears:","✂"));
+            //add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
             add(new EmojiCode(":umbrella:","☂"));
             //Combat
-            add(new EmojiCode(":trident:","\uD83D\uDD31"));
-            add(new EmojiCode(":sword:","\uD83D\uDDE1"));
-            add(new EmojiCode(":shield:","\uD83D\uDEE1"));
+            //add(new EmojiCode(":trident:","\uD83D\uDD31"));
+            //add(new EmojiCode(":sword:","\uD83D\uDDE1"));
+            //add(new EmojiCode(":shield:","\uD83D\uDEE1"));
             add(new EmojiCode(":duel:","⚔"));
-            add(new EmojiCode(":bow:","\uD83C\uDFF9"));
+            //add(new EmojiCode(":bow:","\uD83C\uDFF9"));
             //Potion
-            add(new EmojiCode(":potion:","\uD83E\uDDEA"));
-            add(new EmojiCode(":splash:","⚗"));
+            //add(new EmojiCode(":potion:","\uD83E\uDDEA"));
+            //add(new EmojiCode(":splash:","⚗"));
             //Mark
             add(new EmojiCode(":copyright:","©"));
             add(new EmojiCode(":registered:","®"));
@@ -75,7 +71,7 @@ public class EmojiType {
             add(new EmojiCode(":poweron:","⏻"));
             add(new EmojiCode(":poweroff:","⏼"));
             //Flag
-            add(new EmojiCode(":whiteflag:","⚑"));
+            //add(new EmojiCode(":whiteflag:","⚑"));
             add(new EmojiCode(":blackflag:","⚐"));
             //Boolean
             add(new EmojiCode(":box:","☐"));
@@ -103,8 +99,8 @@ public class EmojiType {
 
             //Misc
             add(new EmojiCode(":fire:","\uD83D\uDD25"));
-            add(new EmojiCode(":bell:","\uD83D\uDD14"));
-            add(new EmojiCode(":hunger:","\uD83C\uDF56"));
+            //add(new EmojiCode(":bell:","\uD83D\uDD14"));
+            //add(new EmojiCode(":hunger:","\uD83C\uDF56"));
             add(new EmojiCode(":unknown:","�"));
             add(new EmojiCode(":house:","⌂"));
             add(new EmojiCode(":clock:","⌚"));
@@ -114,7 +110,7 @@ public class EmojiType {
             add(new EmojiCode(":pencil:","✎"));
             add(new EmojiCode(":degree:","°"));
             add(new EmojiCode(":hourglass:","⌛"));
-            add(new EmojiCode(":hourglass2:","⏳"));
+            //add(new EmojiCode(":hourglass2:","⏳"));
 
             //Cards
             add(new EmojiCode(":suitspade:","♠"));

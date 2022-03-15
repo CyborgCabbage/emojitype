@@ -7,7 +7,7 @@ import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import cyborgcabbage.emojitype.client.EmojiType;
 import net.minecraft.client.gui.screen.CommandSuggestor;
 import net.minecraft.client.gui.widget.TextFieldWidget;
-import net.minecraft.command.CommandSource;
+import net.minecraft.server.command.CommandSource;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,7 +27,7 @@ public abstract class CommandSuggestorMixin {
 
     @Shadow @Final TextFieldWidget textField;
 
-    @Shadow @Final private boolean slashOptional;
+    @Shadow @Final private boolean slashRequired;
 
     @Shadow @Nullable private CompletableFuture<Suggestions> pendingSuggestions;
 
@@ -41,7 +41,7 @@ public abstract class CommandSuggestorMixin {
         if (hasSlash) {
             stringReader.skip();
         }
-        boolean isCommand = this.slashOptional || hasSlash;
+        boolean isCommand = this.slashRequired || hasSlash;
         int cursor = this.textField.getCursor();
         if (!isCommand) {
             String textUptoCursor = text.substring(0, cursor);

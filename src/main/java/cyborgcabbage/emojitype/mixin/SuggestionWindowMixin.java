@@ -18,14 +18,14 @@ import java.util.List;
 public abstract class SuggestionWindowMixin {
     @Final @Shadow CommandSuggestor field_21615;
 
-    @Shadow @Final private List<Suggestion> suggestions;
+    @Shadow @Final private List<Suggestion> field_25709;
 
     @Shadow private int selection;
 
     @Inject(method="complete",at=@At("TAIL"))
     private void overwriteComplete(CallbackInfo ci){
         TextFieldWidget textFieldWidget = ((CommandSuggestorAccessor)field_21615).getTextField();
-        Suggestion suggestion = this.suggestions.get(this.selection);
+        Suggestion suggestion = this.field_25709.get(this.selection);
         int just = suggestion.getRange().getStart() + suggestion.getText().length()-2;
         for(EmojiCode ec: EmojiType.emojiCodes){
             int justTyped = just-ec.getEmoji().length();
