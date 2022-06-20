@@ -1,6 +1,7 @@
 package cyborgcabbage.emojitype.mixin;
 
-import cyborgcabbage.emojitype.client.EmojiType;
+import cyborgcabbage.emojitype.EmojiTypeMod;
+import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.util.SelectionManager;
 import org.spongepowered.asm.mixin.Final;
@@ -26,7 +27,7 @@ public abstract class SelectionManagerMixin {
     @Inject(method="insert(Ljava/lang/String;Ljava/lang/String;)V",at=@At("TAIL"))
     private void inject(String _unused, String insertion, CallbackInfo ci){
         String text = stringGetter.get();
-        for(EmojiCode ec: EmojiType.emojiCodes){
+        for(EmojiCode ec: EmojiTypeMod.emojiCodes){
             if(ec.match(text,selectionStart-1)){
                 delete(-ec.getCode().length());
                 insert(ec.getEmoji());

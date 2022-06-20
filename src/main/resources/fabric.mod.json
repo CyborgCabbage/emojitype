@@ -18,6 +18,12 @@
 
   "environment": "*",
   "entrypoints": {
+    "main": [
+      "cyborgcabbage.emojitype.EmojiTypeMod"
+    ],
+    "modmenu": [
+      "cyborgcabbage.emojitype.config.EmojiTypeConfig"
+    ]
   },
   "mixins": [
     "emojitype.mixins.json"
@@ -25,9 +31,7 @@
 
   "depends": {
     "fabricloader": ">=0.14.8",
-    "minecraft": "1.16.5"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "1.16.5",
+    "cloth-config2": "*"
   }
 }

@@ -1,6 +1,7 @@
 package cyborgcabbage.emojitype.mixin;
 
-import cyborgcabbage.emojitype.client.EmojiType;
+import cyborgcabbage.emojitype.EmojiTypeMod;
+import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,7 +28,7 @@ public abstract class TextFieldWidgetMixin {
     private void inject(char chr, int modifiers, CallbackInfoReturnable<Boolean> cir){
         if(cir.getReturnValue()) {
             int justTyped = getCursorPosWithOffset(-1);
-            for(EmojiCode ec: EmojiType.emojiCodes){
+            for(EmojiCode ec: EmojiTypeMod.emojiCodes){
                 if(ec.match(getText(),justTyped)){
                     eraseCharacters(-ec.getCode().length());
                     //When you hold shift (which you do to type ':') it messes up when eraseCharacters trys to move the cursor back, instead extending the selection

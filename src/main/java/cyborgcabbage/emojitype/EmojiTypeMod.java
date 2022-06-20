@@ -1,11 +1,26 @@
-package cyborgcabbage.emojitype.client;
+package cyborgcabbage.emojitype;
 
+import com.terraformersmc.modmenu.api.ModMenuApi;
+import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.text.TranslatableText;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
-public class EmojiType {
-    public static ArrayList<EmojiCode> emojiCodes = new ArrayList<EmojiCode>() {
+public class EmojiTypeMod implements ModInitializer {
+    public static String MOD_ID = "emojitype";
+
+    public static ArrayList<String> allCodes = new ArrayList<>();
+    public static ArrayList<String> allEmoji = new ArrayList<>();
+    public static ArrayList<String> emojiCodesCombined = new ArrayList<>();
+    public static ArrayList<EmojiCode> emojiCodes = new ArrayList<>();
+    public static final ArrayList<EmojiCode> DEFAULT_EMOJI_CODES = new ArrayList<EmojiCode>(){
         {
             //Face
             add(new EmojiCode(":happy:","☺"));
@@ -199,12 +214,59 @@ public class EmojiType {
             add(new EmojiCode(":zx_:","Ⓧ"));
             add(new EmojiCode(":zy_:","Ⓨ"));
             add(new EmojiCode(":zz_:","Ⓩ"));
+            //Face
+            add(new EmojiCode(":face1:","(°_°)"));
+            add(new EmojiCode(":face2:","(ㆆ_ㆆ)"));
+            add(new EmojiCode(":face3:","(O_O)"));
+            add(new EmojiCode(":face4:","(ಠ_ಠ)"));
+            add(new EmojiCode(":face5:","(｡◕‿‿◕｡)"));
+            add(new EmojiCode(":face6:","(-‿-)"));
+            add(new EmojiCode(":face7:","(◠‿◠)"));
+            add(new EmojiCode(":face8:","(✿◠‿◠)"));
+            add(new EmojiCode(":face9:", "(°o•)"));
+            //Animals
+            add(new EmojiCode(":bear1:", "ʕ·ᴥ·ʔ"));
+            add(new EmojiCode(":bear2:", "ʕっ·ᴥ·ʔっ"));
+            add(new EmojiCode(":bear3:", "ʕ♥ᴥ♥ʔ"));
+            add(new EmojiCode(":bird:","(°v°)"));
+            add(new EmojiCode(":cat:","(°ᴥ°)"));
+            add(new EmojiCode(":dog:","(◕ᴥ◕ʋ)"));
+            //Action
+            add(new EmojiCode(":cheer1:","※\\(^o^)/※"));
+            add(new EmojiCode(":cheer2:","*(^_^)*"));
+            add(new EmojiCode(":cool1:","(⌐■_■)"));
+            add(new EmojiCode(":cool2:","(•_•) ( •_•)>⌐■-■ (⌐■_■)"));
+            add(new EmojiCode(":creep:","ԅ(≖‿≖ԅ)"));
+            add(new EmojiCode(":cry:","(╥﹏╥)"));
+            add(new EmojiCode(":dance1:","ᕕ(⌐■_■)ᕗ ♪♬"));
+            add(new EmojiCode(":dance2:","ᕕ( ᐛ ) ᕗ"));
+            add(new EmojiCode(":table1:","(╯°□°)╯︵ ┻━┻"));
+            add(new EmojiCode(":table2:","(╯°□°)╯︵ ʇɟɐɹɔǝuᴉɯ"));
+            add(new EmojiCode(":table3:","(╯°□°)╯︵ ƃuɐɾoɯ"));
+            add(new EmojiCode(":table4:","┳━┳ノ(°_°ノ)"));
+            add(new EmojiCode(":shrug1:","¯\\(°_o)/¯"));
+            add(new EmojiCode(":shrug2:","¯\\_(ツ)_/¯"));
+            add(new EmojiCode(":gimme:", "༼ つ ◕_◕ ༽つ"));
+            add(new EmojiCode(":lol:","L(° O °L)"));
+            add(new EmojiCode(":zoidberg:","(V) (°,,,,°) (V)"));
+            add(new EmojiCode(":omw:","ON MY WAY! ─=≡Σ(((つ•̀ω•́)つ"));
+            //Misc
+            add(new EmojiCode(":$:", "[$(1)$]"));
         }
     };
-    public static ArrayList<String> allCodes = new ArrayList<>();
-    public static ArrayList<String> allEmoji = new ArrayList<>();
-    public static ArrayList<String> emojiCodesCombined = new ArrayList<>();
-    static {
+    @Override
+    public void onInitialize() {
+
+    }
+
+    public static void update(List<String> emojiCodeStrings){
+        emojiCodes.clear();
+        allCodes.clear();
+        allEmoji.clear();
+        emojiCodesCombined.clear();
+        for (String str : emojiCodeStrings) {
+            EmojiCode.fromString(str).ifPresent(emojiCodes::add);
+        }
         for(EmojiCode ec: emojiCodes){
             allCodes.add(ec.getCode());
             allEmoji.add(ec.getEmoji());

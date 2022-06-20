@@ -1,7 +1,8 @@
 package cyborgcabbage.emojitype.mixin;
 
 import com.mojang.brigadier.suggestion.Suggestion;
-import cyborgcabbage.emojitype.client.EmojiType;
+import cyborgcabbage.emojitype.EmojiTypeMod;
+import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.gui.screen.CommandSuggestor;
 import net.minecraft.client.gui.widget.TextFieldWidget;
@@ -27,10 +28,10 @@ public abstract class SuggestionWindowMixin {
         TextFieldWidget textFieldWidget = ((CommandSuggestorAccessor)field_21615).getTextField();
         Suggestion suggestion = this.field_25709.get(this.selection);
         int just = suggestion.getRange().getStart() + suggestion.getText().length()-2;
-        for(EmojiCode ec: EmojiType.emojiCodes){
+        for(EmojiCode ec: EmojiTypeMod.emojiCodes){
             int justTyped = just-ec.getEmoji().length();
             if(ec.match(textFieldWidget.getText(),justTyped)){
-                textFieldWidget.eraseCharacters(-ec.getCode().length()-2);
+                textFieldWidget.eraseCharacters(-ec.getCode().length()-(1+ec.getEmoji().length()));
                 textFieldWidget.setSelectionEnd(textFieldWidget.getCursor());
                 textFieldWidget.write(ec.getEmoji());
                 break;
