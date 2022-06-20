@@ -14,20 +14,20 @@ public class EmojiType {
             add(new EmojiCode(":skull:","☠"));
             //Tool
             add(new EmojiCode(":pickaxe:","⛏"));
-            //add(new EmojiCode(":axe:","\uD83E\uDE93"));
+            add(new EmojiCode(":axe:","\uD83E\uDE93"));
             //add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
             //add(new EmojiCode(":shears:","✂"));
-            //add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
+            add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
             add(new EmojiCode(":umbrella:","☂"));
             //Combat
-            //add(new EmojiCode(":trident:","\uD83D\uDD31"));
-            //add(new EmojiCode(":sword:","\uD83D\uDDE1"));
-            //add(new EmojiCode(":shield:","\uD83D\uDEE1"));
+            add(new EmojiCode(":trident:","\uD83D\uDD31"));
+            add(new EmojiCode(":sword:","\uD83D\uDDE1"));
+            add(new EmojiCode(":shield:","\uD83D\uDEE1"));
             add(new EmojiCode(":duel:","⚔"));
-            //add(new EmojiCode(":bow:","\uD83C\uDFF9"));
+            add(new EmojiCode(":bow:","\uD83C\uDFF9"));
             //Potion
-            //add(new EmojiCode(":potion:","\uD83E\uDDEA"));
-            //add(new EmojiCode(":splash:","⚗"));
+            add(new EmojiCode(":potion:","\uD83E\uDDEA"));
+            add(new EmojiCode(":splash:","⚗"));
             //Mark
             add(new EmojiCode(":copyright:","©"));
             add(new EmojiCode(":registered:","®"));
