@@ -1,17 +1,10 @@
 package cyborgcabbage.emojitype;
 
-import com.terraformersmc.modmenu.api.ModMenuApi;
-import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
-import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.text.TranslatableText;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class EmojiTypeMod implements ModInitializer {
     public static String MOD_ID = "emojitype";

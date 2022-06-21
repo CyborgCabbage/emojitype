@@ -2,7 +2,6 @@ package cyborgcabbage.emojitype.mixin;
 
 import com.mojang.brigadier.suggestion.Suggestion;
 import cyborgcabbage.emojitype.EmojiTypeMod;
-import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.gui.screen.CommandSuggestor;
 import net.minecraft.client.gui.widget.TextFieldWidget;

@@ -1,7 +1,6 @@
 package cyborgcabbage.emojitype.mixin;
 
 import cyborgcabbage.emojitype.EmojiTypeMod;
-import cyborgcabbage.emojitype.config.EmojiTypeConfig;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import org.spongepowered.asm.mixin.Mixin;
