@@ -23,7 +23,7 @@ public class EmojiTypeMod implements ModInitializer {
     public static final ArrayList<EmojiCode> DEFAULT_EMOJI_CODES = new ArrayList<EmojiCode>(){
         {
             //Face
-            add(new EmojiCode(":happy:","☺"));
+            add(new EmojiCode(":happy1:","☺"));
             add(new EmojiCode(":happy2:","☻"));
             add(new EmojiCode(":sad:","☹"));
             add(new EmojiCode(":skull:","☠"));
@@ -90,25 +90,25 @@ public class EmojiTypeMod implements ModInitializer {
             add(new EmojiCode(":blackflag:","⚐"));
             //Boolean
             add(new EmojiCode(":box:","☐"));
-            add(new EmojiCode(":yesbox:","☑"));
-            add(new EmojiCode(":nobox:","☒"));
+            add(new EmojiCode(":boxyes:","☑"));
+            add(new EmojiCode(":boxno:","☒"));
             add(new EmojiCode(":yes:","✔"));
             add(new EmojiCode(":no:","✘"));
             //Shape
-            add(new EmojiCode(":square:","⏹"));
+            add(new EmojiCode(":square1:","⏹"));
             add(new EmojiCode(":square2:","□"));
-            add(new EmojiCode(":circle:","⏺"));
+            add(new EmojiCode(":circle1:","⏺"));
             add(new EmojiCode(":circle2:","○"));
             add(new EmojiCode(":cross:","❌"));
-            add(new EmojiCode(":heart:","❤"));
+            add(new EmojiCode(":heart1:","❤"));
             add(new EmojiCode(":heart2:","❣"));
-            add(new EmojiCode(":triangle:","▲"));
+            add(new EmojiCode(":triangle1:","▲"));
             add(new EmojiCode(":triangle2:","△"));
-            add(new EmojiCode(":diamond:","◆"));
+            add(new EmojiCode(":diamond1:","◆"));
             add(new EmojiCode(":diamond2:","◇"));
             add(new EmojiCode(":loopedsquare:","⌘"));
             add(new EmojiCode(":target:","◎"));
-            add(new EmojiCode(":star:","★"));
+            add(new EmojiCode(":star1:","★"));
             add(new EmojiCode(":star2:","☆"));
             add(new EmojiCode(":star3:","⭐"));
 
@@ -128,13 +128,13 @@ public class EmojiTypeMod implements ModInitializer {
             //add(new EmojiCode(":hourglass2:","⏳"));
 
             //Cards
-            add(new EmojiCode(":suitspade:","♠"));
+            add(new EmojiCode(":suitspade1:","♠"));
             add(new EmojiCode(":suitspade2:","♤"));
-            add(new EmojiCode(":suitheart:","♥"));
+            add(new EmojiCode(":suitheart1:","♥"));
             add(new EmojiCode(":suitheart2:","♡"));
-            add(new EmojiCode(":suitclub:","♣"));
+            add(new EmojiCode(":suitclub1:","♣"));
             add(new EmojiCode(":suitclub2:","♧"));
-            add(new EmojiCode(":suitdiamond:","♦"));
+            add(new EmojiCode(":suitdiamond1:","♦"));
             add(new EmojiCode(":suitdiamond2:","♢"));
             //Music
             add(new EmojiCode(":note1:","♩"));
@@ -238,20 +238,18 @@ public class EmojiTypeMod implements ModInitializer {
             add(new EmojiCode(":cool2:","(•_•) ( •_•)>⌐■-■ (⌐■_■)"));
             add(new EmojiCode(":creep:","ԅ(≖‿≖ԅ)"));
             add(new EmojiCode(":cry:","(╥﹏╥)"));
-            add(new EmojiCode(":dance1:","ᕕ(⌐■_■)ᕗ ♪♬"));
+            add(new EmojiCode(":dance1:","ᕕ(⌐■_■)ᕗ"));
             add(new EmojiCode(":dance2:","ᕕ( ᐛ ) ᕗ"));
             add(new EmojiCode(":table1:","(╯°□°)╯︵ ┻━┻"));
             add(new EmojiCode(":table2:","(╯°□°)╯︵ ʇɟɐɹɔǝuᴉɯ"));
             add(new EmojiCode(":table3:","(╯°□°)╯︵ ƃuɐɾoɯ"));
             add(new EmojiCode(":table4:","┳━┳ノ(°_°ノ)"));
-            add(new EmojiCode(":shrug1:","¯\\(°_o)/¯"));
-            add(new EmojiCode(":shrug2:","¯\\_(ツ)_/¯"));
-            add(new EmojiCode(":gimme:", "༼ つ ◕_◕ ༽つ"));
-            add(new EmojiCode(":lol:","L(° O °L)"));
-            add(new EmojiCode(":zoidberg:","(V) (°,,,,°) (V)"));
-            add(new EmojiCode(":omw:","ON MY WAY! ─=≡Σ(((つ•̀ω•́)つ"));
-            //Misc
-            add(new EmojiCode(":$:", "[$(1)$]"));
+            add(new EmojiCode(":shrug1:","¯\\_(ツ)_/¯"));
+            add(new EmojiCode(":shrug2:","¯\\(°_o)/¯"));
+            add(new EmojiCode(":gimme:", "༼ つ◕_◕༽つ"));
+            add(new EmojiCode(":lol:","L(°O°L)"));
+            add(new EmojiCode(":zoidberg:","(V)(°,,,°)(V)"));
+            add(new EmojiCode(":fly:","─=≡Σ((つ•ω•)つ"));
         }
     };
     @Override
