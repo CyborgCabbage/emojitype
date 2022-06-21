@@ -79,7 +79,6 @@ public class EmojiTypeConfig implements ModMenuApi {
                                 return l;
                             })
                             .setSaveConsumer((List<String> lstr) -> {
-                                System.out.println(lstr);
                                 emojiCodeStrings.clear();
                                 emojiCodeStrings.addAll(lstr);
                             })
