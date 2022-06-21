@@ -15,6 +15,13 @@ public class EmojiTypeMod implements ModInitializer {
     public static ArrayList<EmojiCode> emojiCodes = new ArrayList<>();
     public static final ArrayList<EmojiCode> DEFAULT_EMOJI_CODES = new ArrayList<EmojiCode>(){
         {
+            add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
+            add(new EmojiCode(":shears:","✂"));
+            add(new EmojiCode(":whiteflag:","⚑"));
+            add(new EmojiCode(":bell:","\uD83D\uDD14"));
+            add(new EmojiCode(":hunger:","\uD83C\uDF56"));
+            add(new EmojiCode(":hourglass2:","⏳"));
+
             //Face
             add(new EmojiCode(":happy1:","☺"));
             add(new EmojiCode(":happy2:","☻"));
@@ -23,8 +30,6 @@ public class EmojiTypeMod implements ModInitializer {
             //Tool
             add(new EmojiCode(":pickaxe:","⛏"));
             add(new EmojiCode(":axe:","\uD83E\uDE93"));
-            //add(new EmojiCode(":bucket:","\uD83E\uDEA3"));
-            //add(new EmojiCode(":shears:","✂"));
             add(new EmojiCode(":fishing:","\uD83C\uDFA3"));
             add(new EmojiCode(":umbrella:","☂"));
             //Combat
@@ -79,7 +84,6 @@ public class EmojiTypeMod implements ModInitializer {
             add(new EmojiCode(":poweron:","⏻"));
             add(new EmojiCode(":poweroff:","⏼"));
             //Flag
-            //add(new EmojiCode(":whiteflag:","⚑"));
             add(new EmojiCode(":blackflag:","⚐"));
             //Boolean
             add(new EmojiCode(":box:","☐"));
@@ -107,8 +111,6 @@ public class EmojiTypeMod implements ModInitializer {
 
             //Misc
             add(new EmojiCode(":fire:","\uD83D\uDD25"));
-            //add(new EmojiCode(":bell:","\uD83D\uDD14"));
-            //add(new EmojiCode(":hunger:","\uD83C\uDF56"));
             add(new EmojiCode(":unknown:","�"));
             add(new EmojiCode(":house:","⌂"));
             add(new EmojiCode(":clock:","⌚"));
@@ -118,7 +120,6 @@ public class EmojiTypeMod implements ModInitializer {
             add(new EmojiCode(":pencil:","✎"));
             add(new EmojiCode(":degree:","°"));
             add(new EmojiCode(":hourglass:","⌛"));
-            //add(new EmojiCode(":hourglass2:","⏳"));
 
             //Cards
             add(new EmojiCode(":suitspade1:","♠"));
