@@ -22,6 +22,7 @@ public class EmojiCode {
             int stringIndex = charIndex-i;
             int codeIndex = code.length()-1-i;
             if(stringIndex < 0 || codeIndex < 0) return false;
+            if(stringIndex >= string.length()) return false;
             if(string.charAt(stringIndex) != code.charAt(codeIndex)) return false;
         }
         return true;
