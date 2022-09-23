@@ -1,5 +1,6 @@
 package cyborgcabbage.emojitype;
 
+import cyborgcabbage.emojitype.config.ConfigUtil;
 import cyborgcabbage.emojitype.emoji.EmojiCode;
 import net.fabricmc.api.ModInitializer;
 
@@ -248,7 +249,7 @@ public class EmojiTypeMod implements ModInitializer {
     };
     @Override
     public void onInitialize() {
-
+        ConfigUtil.deserialise();
     }
 
     public static void update(List<String> emojiCodeStrings){

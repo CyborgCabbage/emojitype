@@ -30,8 +30,10 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.8",
-    "minecraft": "1.17.1",
-    "cloth-config2": "*"
+    "fabricloader": "*",
+    "minecraft": "1.17.1"
+  },
+  "suggests": {
+    "cloth-config2" : "*"
   }
 }
