@@ -3,11 +3,9 @@
   "minVersion": "0.8",
   "package": "cyborgcabbage.emojitype.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
   "client": [
-    "CommandSuggestorAccessor",
-    "CommandSuggestorMixin",
+    "ChatInputSuggestorAccessor",
+    "ChatInputSuggestorMixin",
     "SelectionManagerMixin",
     "SuggestionWindowMixin",
     "TextFieldWidgetMixin"
