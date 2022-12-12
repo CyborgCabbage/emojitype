@@ -64,7 +64,7 @@ public class EmojiTypeMod implements ModInitializer {
             add(new EmojiCode(":handright:","☞"));
             add(new EmojiCode(":swap:","⇄"));
             //Culture
-            add(new EmojiCode(":yingyang:","☯"));
+            add(new EmojiCode(":yinyang:","☯"));
             add(new EmojiCode(":peace:","☮"));
             //Weather
             add(new EmojiCode(":sun:","☀"));
